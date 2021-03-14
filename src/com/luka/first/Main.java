@@ -12,11 +12,17 @@ public class Main {
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
+        Scanner directory = new Scanner(System.in);
+
+        String directory_name;
         int numberOfFiles;
 
         String route_to_my_dir = "C:\\Users\\luka1\\Desktop\\";
-        String final_route = route_to_my_dir + "new-directory";
 
+        System.out.println("Enter a directory name: ");
+        directory_name = directory.nextLine();
+
+        String final_route = route_to_my_dir + directory_name;   // User defined directory name
         LocalDateTime myDate = LocalDateTime.now();
         DateTimeFormatter formatted = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");
 
