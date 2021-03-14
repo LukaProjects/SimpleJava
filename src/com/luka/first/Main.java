@@ -57,4 +57,12 @@ public class Main {
 
 
     }
+
+    public static void directoryDelete() {   // Add this features
+
+    }
+
+    public static void specificFileDelete() {
+
+    }
 }
