@@ -4,10 +4,15 @@ import java.io.File;
 import java.io.IOException;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.Scanner;
+
 
 public class Main {
 
     public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+        int numberOfFiles;
 
         String route_to_my_dir = "C:\\Users\\luka1\\Desktop\\";
         String final_route = route_to_my_dir + "new-directory";
@@ -27,7 +32,10 @@ public class Main {
         }
 
         try {
-            for (int i=0; i<10; i++) {
+            System.out.println("Enter a number of files you want to create: ");
+            numberOfFiles = scanner.nextInt();
+
+            for (int i=0; i<numberOfFiles; i++) {    // creating a user defined number of files inside of a wanted directory
                 String filename = "file" + i + ".txt";
                 File f = new File(final_route + "\\" + filename);
                 if (f.createNewFile()){
